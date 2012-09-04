@@ -9,6 +9,8 @@ require "json"
 
 class Friendpal < Sinatra::Base
   enable :sessions
+  set :static, true
+  set :public, File.dirname(__FILE__) + '/static'
 
   before do
     @client_id = "258488640938297"
